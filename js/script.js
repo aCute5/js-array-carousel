@@ -16,7 +16,7 @@ for (let i = 0; i < arrImg.length; i++) {
 const listEleImg = document.querySelectorAll('.carousel-img'); 
 let showIndex = 0;
 eleUp.addEventListener('click', function () {
-    if (showIndex = arrIm\g.length){
+    if (showIndex = arrImg.length){
         showIndex-- 
     }
    	listEleImg[showIndex].classList.remove('show');
