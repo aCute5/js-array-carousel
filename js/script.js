@@ -16,28 +16,27 @@ for (let i = 0; i < arrImg.length; i++) {
 const listEleImg = document.querySelectorAll('.carousel-img'); 
 let showIndex = 0;
 eleUp.addEventListener('click', function () {
-    if (showIndex = arrImg.length){
-        showIndex-- 
+    if (showIndex === 4) {
+        showIndex = -1 
     }
    	listEleImg[showIndex].classList.remove('show');
 	showIndex ++;
 	listEleImg[showIndex].classList.add('show');
-	eleUp.classList.remove('hidden');
+	eleDown.classList.remove('hidden');
 	if (showIndex === listEleImg.length - 1) {
 		eleUp.classList.add('hidden');
 	}
    
 });
-
 eleDown.addEventListener('click', function () {
-    if (showIndex = arrImg.length){
-         showIndex--
+    if (showIndex = 0){
+         showIndex = 5 
     }
 	listEleImg[showIndex].classList.remove('show');
 	showIndex--;
 	listEleImg[showIndex].classList.add('show');
-	eleDown.classList.remove('hidden');
-	if (showIndex === listEleImg.length + 1) {
+	eleUp.classList.remove('hidden');
+	if (showIndex === 0) {
 		eleDown.classList.add('hidden');
 	}
     
